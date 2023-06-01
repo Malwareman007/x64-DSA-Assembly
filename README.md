@@ -46,6 +46,28 @@ To get started with the Assembly DSA Toolkit, follow these steps:
 4. Explore the code, comments, and function definitions to understand how the DSA component works.
 5. Modify and experiment with the code to suit your needs or integrate it into your projects.
 
+## How to compile code in linux 
+1. let the file name be `stack.asm`
+2. Install NASM if you don't have it already.`sudo apt update` `sudo apt install nasm`
+3. Assemble the code using the following command: `nasm -f elf64 stack.asm -o stack.o`
+4. Link the object file and create an executable using the following command: `ld stack.o -o stack`
+5. Run the program by executing `./stack.`
+
+
+## How to install Assembley in Windows.
+See in this [Blog](https://medium.com/@malwareman007/how-to-install-masm-microsoft-assembler-on-windows-10-8-1-8-and-7-step-by-step-guide-df5fd9dca599)
+**or** 
+* Install WSL: Open the Microsoft Store and search for "Linux" to find various Linux distributions. Choose and install the one you prefer (e.g., Ubuntu, Debian).
+* Launch WSL: Once the installation is complete, open the installed Linux distribution from the Start menu or by searching for its name. It will open a command line interface for the Linux environment.
+* Transfer the code: In the Linux terminal, you can transfer the assembly code file (e.g., stack.asm) to the Linux environment. You can do this in several ways, such as using scp or sharing a folder between Windows and WSL.
+* Install NASM: Inside the Linux environment, install NASM by running the following command:
+`sudo apt update`
+`sudo apt install nasm`
+* Assemble and link the code: In the Linux terminal, navigate to the directory where you transferred the assembly code file. Then, assemble and link the code using the following commands:`nasm -f elf64 stack.asm -o stack.o` <br>
+`ld stack.o -o stack`
+* Run the program: Finally, execute the program by running the following command:
+`./stack`
+
 ## Contributing
 
 Contributions are welcome! If you would like to contribute to the Assembly DSA Toolkit, please follow these steps:
@@ -56,3 +78,4 @@ Contributions are welcome! If you would like to contribute to the Assembly DSA T
 4. Test your changes to ensure they do not introduce any errors or bugs.
 5. Commit and push your changes to your forked repository.
 6. Submit a pull request, describing your changes and the motivation behind them.
+
